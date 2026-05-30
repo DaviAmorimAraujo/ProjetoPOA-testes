@@ -4,5 +4,5 @@
 /**
  * 
  */
-module ProjetoPOAGrupo04 {
+module ProjetoPO {
 }
