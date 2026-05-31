@@ -1,0 +1,69 @@
+package thread;
+
+import java.util.List;
+
+import factory.ProcessorFactory;
+import model.Venda;
+import service.VendaProcessor;
+import singleton.RelatorioSingleton;
+
+public class VendaThread implements Runnable {
+
+     private final List<Venda> bloco;
+ 
+    
+    private final String tipoProcessador;
+ 
+   
+
+
+
+
+    public VendaThread(List<Venda> bloco, String tipoProcessador) {
+        this.bloco = bloco;
+        this.tipoProcessador = tipoProcessador;
+    }
+ 
+   
+
+
+
+    public VendaThread(List<Venda> bloco) {
+        this(bloco, "padrao");
+    }
+ 
+   
+
+
+
+
+
+    @Override
+    public void run() {
+        System.out.println("[" + Thread.currentThread().getName() + "] Iniciando processamento de "
+                + bloco.size() + " registros...");
+ 
+        try {
+            
+
+            VendaProcessor processador = ProcessorFactory.criarProcessador(tipoProcessador);
+ 
+            
+
+            processador.processar(bloco);
+ 
+            
+
+            RelatorioSingleton relatorio = RelatorioSingleton.getInstance();
+            relatorio.acumularResultados(0, 0, tipoProcessador, 0);
+ 
+            System.out.println("[" + Thread.currentThread().getName() + "] Bloco processado e gravado no relatório.");
+ 
+        } catch (Exception e) {
+            System.err.println("[" + Thread.currentThread().getName() + "] Erro ao processar bloco: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    
+}
