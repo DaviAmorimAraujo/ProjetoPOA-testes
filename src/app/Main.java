@@ -17,7 +17,7 @@ import java.util.List;
 public class Main {
 
     // Número de threads que irão processar os dados em paralelo
-    private static final int NUM_THREADS = 4;
+    private static final int NUM_THREADS = 2;
 
     public static void main(String[] args) throws Exception {
 
@@ -41,7 +41,7 @@ public class Main {
 
             List<Venda> bloco = vendas.subList(inicio, fim);
 
-            VendaThread t = new VendaThread(bloco, i + 1);
+            VendaThread t = new VendaThread(bloco, "padrao");
             threads.add(t);
             t.start();
         }

@@ -94,7 +94,7 @@ public class CSVReader {
 
                 // Pula o cabeçalho (primeira linha do CSV)
                 if (numeroLinha == 1) {
-                    System.out.println("[CSVReader] Cabeçalho ignorado: " + linha);
+                    System.out.println("[CSVReader] Cabecalho ignorado: " + linha);
                     continue;
                 }
 
@@ -113,7 +113,7 @@ public class CSVReader {
             }
         }
 
-        System.out.println("[CSVReader] Leitura concluída. Total de registros válidos: " + vendas.size());
+        System.out.println("[CSVReader] Leitura concluida. Total de registros validos: " + vendas.size());
         return vendas;
     }
 
@@ -143,7 +143,7 @@ public class CSVReader {
             // Valida número de colunas
             if (campos.length != TOTAL_COLUNAS) {
                 System.err.printf(
-                    "[CSVReader] AVISO — Linha %d ignorada: esperava %d colunas, encontrou %d. Conteúdo: '%s'%n",
+                    "[CSVReader] AVISO — Linha %d ignorada: esperava %d colunas, encontrou %d. Conteudo: '%s'%n",
                     numeroLinha, TOTAL_COLUNAS, campos.length, linha
                 );
                 return null;
@@ -179,7 +179,7 @@ public class CSVReader {
         } catch (NumberFormatException e) {
             // Captura erros de conversão numérica (ex.: letras em campos numéricos)
             System.err.printf(
-                "[CSVReader] AVISO — Linha %d ignorada: erro de formato numérico — %s%n",
+                "[CSVReader] AVISO — Linha %d ignorada: erro de formato numerico — %s%n",
                 numeroLinha, e.getMessage()
             );
             return null;

@@ -1,21 +1,5 @@
 id,produto,categoria,valor,quantidade
-1,Notebook Dell Inspiron,Eletronico,3500.00,2
-2,Mouse Logitech MX,Periferico,80.00,5
-3,Teclado Mecânico Redragon,Periferico,150.00,3
-4,Monitor LG 24,Eletronico,1200.00,1
-5,Headset HyperX Cloud,Periferico,350.00,4
-6,SSD Kingston 480GB,Armazenamento,220.00,6
-7,HD Externo Seagate 1TB,Armazenamento,300.00,2
-8,Placa de Vídeo RX 580,Eletronico,1800.00,1
-9,Webcam Logitech C920,Periferico,400.00,3
-10,Memória RAM 16GB DDR4,Componente,280.00,5
-11,Processador Intel i5,Componente,1100.00,2
-12,Placa-mãe Asus B450,Componente,650.00,1
-13,Gabinete Gamer NZXT,Acessorio,450.00,2
-14,Fonte Corsair 650W,Componente,380.00,3
-15,Cooler CPU Cooler Master,Componente,120.00,4
-16,Mouse Pad XL Gamer,Acessorio,60.00,10
-17,Cabo HDMI 2.0 2m,Acessorio,35.00,8
-18,Hub USB 4 Portas,Periferico,55.00,6
-19,Impressora HP LaserJet,Eletronico,980.00,1
-20,Tablet Samsung A8,Eletronico,1400.00,3
+1,banana,fruta,10.0, 2
+2,abacate,fruta,15.0,1
+3,abobora,verdura,2.0,1
+4,batata,legume,1.0,1
